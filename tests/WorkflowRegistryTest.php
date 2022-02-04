@@ -44,11 +44,25 @@ class WorkflowRegistryTest extends BaseWorkflowTestCase
                     ],
                 ],
             ],
+            'straight2' => [
+                'supports' => ['Tests\Fixtures\TestObject'],
+                'places' => ['d', 'f', 'g'],
+                'transitions' => [
+                    't1' => [
+                        'from' => 'd',
+                        'to' => 'f',
+                    ],
+                    't2' => [
+                        'from' => 'f',
+                        'to' => 'g',
+                    ],
+                ],
+            ],
         ];
 
         $registry = new WorkflowRegistry($config, null, new Dispatcher());
         $subject = new TestObject;
-        $workflow = $registry->get($subject);
+        $workflow = $registry->get($subject, 'straight');
 
         $markingStoreProp = new ReflectionProperty(Workflow::class, 'markingStore');
         $markingStoreProp->setAccessible(true);
