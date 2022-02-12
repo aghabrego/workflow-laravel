@@ -9,6 +9,7 @@ authy Changelog
 - Fix: Manteniendo soporte symfony 5.4 y 6.0.
 - Agregando CHANGELOG.
 - Fix: Corrigiendo versionamiento en el README.md de Laravel.
+- Agregando archivo de configuración de job de gitlab ```.gitlab-ci.yml```.
 
 ## 0.0.1 - 2021-01-11
 

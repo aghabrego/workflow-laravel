@@ -1,0 +1,18 @@
+image: lorisleiva/laravel-docker:8.0
+
+cache:
+  key: $CI_BUILD_REF_NAME
+  paths:
+    - vendor
+
+stages:
+  - test
+
+test:
+  stage: test
+  script:
+    - composer install --prefer-dist --no-ansi --no-interaction --no-progress
+    - ./vendor/phpunit/phpunit/phpunit -v --coverage-text --colors=never --stderr
+  artifacts:
+    expire_in: 2 days
+    when: always
