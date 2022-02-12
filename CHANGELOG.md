@@ -8,6 +8,7 @@ authy Changelog
 - Fix: Corrigiendo composer.
 - Fix: Manteniendo soporte symfony 5.4 y 6.0.
 - Agregando CHANGELOG.
+- Fix: Corrigiendo versionamiento en el README.md de Laravel.
 
 ## 0.0.1 - 2021-01-11
 
