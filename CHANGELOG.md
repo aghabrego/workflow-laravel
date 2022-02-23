@@ -1,5 +1,8 @@
-authy Changelog
-====================
+# Changelog
+
+## 0.0.3 - 2022-02-23
+
+- Corrigiendo nombre y año en el archivo ```LICENSE```.
 
 ## 0.0.2 - 2022-02-12
 
