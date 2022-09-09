@@ -4,6 +4,7 @@
 
 - Quitando soporte PHP 8.0.
 - Quitando soporte symfony 5.
+- Degradación de dependencias de symfony.
 
 ## 0.0.3 - 2022-02-23
 
