@@ -64,13 +64,13 @@ class WorkflowDumpCommandTest extends BaseWorkflowTestCase
 
     public function testWorkflowCommand()
     {
-        $optionalPath = '/my/path';
+        $optionalPath = __DIR__ . "/my/path";
         $disk = 'public';
 
         Storage::fake($disk);
 
-        if (Storage::disk($disk)->exists($optionalPath . '/straight.png')) {
-            Storage::disk($disk)->delete($optionalPath . '/straight.png');
+        if (Storage::disk($disk)->exists($optionalPath . '/straight.jpeg')) {
+            Storage::disk($disk)->delete($optionalPath . '/straight.jpeg');
         }
 
         $command = Mockery::mock(WorkflowDumpCommand::class)
@@ -80,7 +80,7 @@ class WorkflowDumpCommandTest extends BaseWorkflowTestCase
             ->andReturn('straight')
             ->shouldReceive('option')
             ->with('format')
-            ->andReturn('png')
+            ->andReturn('jpeg')
             ->shouldReceive('option')
             ->with('class')
             ->andReturn('Tests\Fixtures\TestObject')
@@ -94,7 +94,7 @@ class WorkflowDumpCommandTest extends BaseWorkflowTestCase
 
         $command->handle();
 
-        Storage::disk($disk)->assertExists($optionalPath . '/straight.png');
+        Storage::disk($disk)->assertExists($optionalPath . '/straight.jpeg');
     }
 
     protected function getEnvironmentSetUp($app)

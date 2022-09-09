@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.4 - 2022-09-09
+
+- Quitando soporte PHP 8.0.
+- Quitando soporte symfony 5.
+
 ## 0.0.3 - 2022-02-23
 
 - Corrigiendo nombre y año en el archivo ```LICENSE```.
