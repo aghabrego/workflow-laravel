@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.5 - 2023-04-19
+
+- Agregando soporte a múltiples versiones de laravel desde la v5 a la v9.
+
 ## 0.0.4 - 2022-09-09
 
 - Quitando soporte PHP 8.0.
