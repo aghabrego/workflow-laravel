@@ -90,11 +90,11 @@ class DispatchAdapterTest extends TestCase
                 $symfonyEvent = new $symfonyEvent(new stdClass(), new Marking(), new Transition($transition, [], []));
 
                 foreach ([
-                    "workflow.${eventType}",
-                    "workflow.${name}.${eventType}",
-                    "workflow.${name}.${eventType}.${transition}",
+                    "workflow.{$eventType}",
+                    "workflow.{$name}.{$eventType}",
+                    "workflow.{$name}.{$eventType}.{$transition}",
                 ] as $eventName) {
-                    yield "${eventName} (${dotScenario})" => [
+                    yield "{$eventName} ({$dotScenario})" => [
                         $expectedEventClass,
                         $symfonyEvent,
                         $eventName,
@@ -102,7 +102,7 @@ class DispatchAdapterTest extends TestCase
                     ];
                 }
 
-                yield "No event name ${eventType} (${dotScenario})" => [
+                yield "No event name {$eventType} ({$dotScenario})" => [
                     WorkflowEvent::class,
                     $symfonyEvent,
                     null,
