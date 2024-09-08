@@ -20,7 +20,7 @@
     "symfony/workflow": ">=3.3",
     "symfony/process": ">=3.3",
     "symfony/var-dumper": ">=3.3",
-    "symfony/event-dispatcher-contracts": "^2.5",
+    "symfony/event-dispatcher-contracts": ">=2.5",
     "illuminate/console": ">=5.3",
     "illuminate/support": ">=5.3",
     "illuminate/contracts": ">=5.3"
